@@ -13,7 +13,6 @@ const Hero = () => {
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Fola
             </span>
-            
           </h1>
           <div className="text-2xl sm:text-3xl lg:text-4xl text-white/90 mb-8 h-12">
             <span className="text-blue-400">
@@ -29,7 +28,7 @@ const Hero = () => {
                 cursorCharacter="|"
               />
             </span>
-          </div> 
+          </div>
           <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
             Passionate about creating innovative web solutions and bringing
             ideas to life through clean, efficient code. Specialized in modern

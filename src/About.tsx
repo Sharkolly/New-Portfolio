@@ -21,8 +21,9 @@ const About = () => {
             </p>
             <p className="text-lg text-white/80 leading-relaxed">
               I specialize in modern JavaScript frameworks like React, Node.js,
-              and have extensive experience with databases. I believe in writing clean, maintainable code
-              and creating user experiences that make a difference.
+              and have extensive experience with databases. I believe in writing
+              clean, maintainable code and creating user experiences that make a
+              difference.
             </p>
             <div className="grid grid-cols-2 gap-6 mt-8">
               {/* <div className="text-center">
@@ -42,7 +43,7 @@ const About = () => {
             <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <Code  className="w-8 h-8 text-blue-400" />
+                  <Code className="w-8 h-8 text-blue-400" />
                   <div>
                     <h3 className="text-xl font-semibold text-white">
                       Frontend Development

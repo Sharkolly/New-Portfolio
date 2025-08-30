@@ -1,26 +1,35 @@
 import { Github, Mail } from "lucide-react";
 import { useState } from "react";
 import { SiWhatsapp } from "react-icons/si";
+import { send_message } from "./api/route";
+import { toast } from "react-toastify";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [form_data, setForm_data] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    try {
+      const response = await send_message(form_data);
+      console.log("Message sent successfully:", response);
+      toast.success("Message sent successfully");
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast.error("Error sending message");
+    }
   };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+    const { name, value } = e.target;
+    setForm_data({
+      ...form_data,
+      [name]: value,
     });
   };
 
@@ -76,7 +85,7 @@ const Contact = () => {
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                value={formData.name}
+                value={form_data.name}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors"
                 required
@@ -88,7 +97,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                value={formData.email}
+                value={form_data.email}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors"
                 required
@@ -100,7 +109,7 @@ const Contact = () => {
                 name="message"
                 placeholder="Your Message"
                 rows={5}
-                value={formData.message}
+                value={form_data.message}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors resize-none"
                 required

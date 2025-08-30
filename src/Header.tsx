@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="text-2xl font-bold text-white">
             <span className="text-blue-400">&lt;</span>
-            FolaDev🚀
+            FOLADEV🚀
             <span className="text-purple-400">{"/>"}</span>
           </div>
 
