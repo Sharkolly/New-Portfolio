@@ -37,13 +37,19 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer">
+          <a
+              href="#projects" 
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer">
             View My Work
-          </button>
-          <button className="border-2 border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-2 cursor-pointer">
-            <Download className="w-5 h-5" />
-            Download CV
-          </button>
+          </a>
+          <a
+              href="/Adesanya Mofeoluwa.pdf"
+              download="Adesanya Mofeoluwa Folajimi Resume" className="border-2 border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-2 cursor-pointer">
+           
+              <Download className="w-5 h-5" />
+              Download CV
+            
+          </a>
         </div>
 
         <div className="flex justify-center space-x-6">
